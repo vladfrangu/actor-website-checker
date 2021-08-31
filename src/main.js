@@ -85,6 +85,8 @@ Apify.main(async () => {
     }
 
     const handlePageFunction = async ({ request, $, body, page, response }) => {
+        console.log(request);
+        
         if (page && waitFor) {
             // We wait for number in ms or a selector
             const maybeNumber = Number(waitFor);
